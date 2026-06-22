@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专题 · 球探 · 站点说明</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #f2f2f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2a2a2a;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        /* hero 横幅 */
+        .hero {
+            background: linear-gradient(145deg, #e8e6e1 0%, #d6d2cb 100%);
+            padding: 3.2rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #1f2a2c;
+            background: rgba(255, 245, 235, 0.3);
+            display: inline-block;
+            padding: 0 1.2rem 0.2rem;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+            margin-bottom: 0.8rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #3b4245;
+            border-top: 1px solid #b8b6ae;
+            display: inline-block;
+            padding-top: 0.5rem;
+            margin-top: 0.2rem;
+            font-weight: 370;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #fcfcfa;
+            border: 1px solid #dedbd4;
+            border-radius: 24px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 470;
+            letter-spacing: 0.3px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #d8d4c9;
+            display: inline-block;
+            color: #2d383a;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 440;
+            margin: 1.2rem 0 0.4rem;
+            color: #344042;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3c3c3a;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+
+        .card li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #424240;
+        }
+
+        .card li::before {
+            content: "•";
+            position: absolute;
+            left: 0.1rem;
+            color: #7f7a70;
+        }
+
+        .highlight-link {
+            color: #2f5b5b;
+            font-weight: 480;
+            text-decoration: none;
+            border-bottom: 1px dotted #7f9b9b;
+            transition: border 0.15s, background 0.15s;
+        }
+
+        .highlight-link:hover {
+            border-bottom: 1px solid #2f5b5b;
+            background: rgba(47, 91, 91, 0.04);
+        }
+
+        .faq-item {
+            margin-top: 0.7rem;
+        }
+
+        .faq-question {
+            font-weight: 470;
+            color: #2f3e40;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-answer {
+            margin-left: 0.5rem;
+            color: #52514e;
+        }
+
+        .site-note {
+            background: #efede9;
+            border: 1px solid #d6d1c9;
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            margin-top: 2.2rem;
+            text-align: center;
+            color: #3b3f3d;
+        }
+
+        .site-note a {
+            color: #1d4242;
+            font-weight: 490;
+            text-decoration: none;
+            border-bottom: 1px solid #919b95;
+        }
+
+        .site-note a:hover {
+            border-bottom: 2px solid #1d4242;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #6b6863;
+            text-align: center;
+            border-top: 1px solid #d6d2ca;
+            padding-top: 1.8rem;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1.2rem 0.8rem 2rem; }
+            .hero { padding: 2.2rem 1rem; }
+            .hero h1 { font-size: 1.7rem; }
+            .card { padding: 1.5rem 1.2rem; }
+            .card h2 { font-size: 1.25rem; }
+        }
+
+        @media (min-width: 780px) {
+            .hero h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 横幅 -->
+    <div class="hero">
+        <h1>球探</h1>
+        <div class="sub">站点说明 · 背景与介绍</div>
+    </div>
+
+    <!-- 卡片1：站点背景与可信说明 -->
+    <div class="card">
+        <h2>关于这个站点</h2>
+        <p>「<a href="https://chinese-qiutanscore.com" class="highlight-link">球探</a>」是一个专门针对中文用户整理的体育资讯与赛事数据参考平台。站内信息聚焦于足球、篮球等职业联赛的实时比分、阵容动态和赛季统计。所有数据均来源于公开赛事记录，并经过再次校对与归类，以方便读者快速浏览。</p>
+        <p>站点不提供投注、博彩或任何形式的金钱游戏服务，也不对比赛结果进行预测或诱导。内容定位为资料性质，力求准确、稳定、有条理。对于关键比赛数据，通常会标注数据源或更新日期，方便使用者自行核实。</p>
+    </div>
+
+    <!-- 卡片2：平台特点与内容聚焦 -->
+    <div class="card">
+        <h2>信息组织方式</h2>
+        <p>为了让访问者更快找到需要的内容，<a href="https://chinese-qiutanscore.com" class="highlight-link">球探</a>将页面分为几个主要板块：</p>
+        <ul>
+            <li><strong>实时赛况</strong> – 展示正在进行的重点场次，包含比分、进球时间及红黄牌等摘要。</li>
+            <li><strong>联赛巡礼</strong> – 覆盖英超、西甲、意甲、中超、CBA 等主流赛事，提供积分榜与近期战绩。</li>
+            <li><strong>球队/球员数据</strong> – 整理赛季射手榜、助攻榜以及球队攻防统计，方便横向对比。</li>
+            <li><strong>更新日志</strong> – 每次数据调整或页面优化都会简要记录，保持透明。</li>
+        </ul>
+        <p>每个板块都保持简洁的表格或列表样式，不堆砌广告或无关弹窗，核心是让信息本身更清晰。</p>
+    </div>
+
+    <!-- 卡片3：适用场景与常见疑问（FAQ摘要） -->
+    <div class="card">
+        <h2>使用场景与说明</h2>
+        <p>无论你是日常关注联赛的球迷，还是需要快速查阅某场比赛数据的爱好者，<a href="https://chinese-qiutanscore.com" class="highlight-link">球探</a>都可以作为一个轻量参考。访问时无需注册或登录，所有公开页面均可直接浏览。</p>
+
+        <h3>常见疑问</h3>
+        <div class="faq-item">
+            <div class="faq-question">—— 数据更新频率如何？</div>
+            <div class="faq-answer">主流联赛进行期间，比分数据通常延迟 1–3 分钟；赛后的统计在完场后 10–20 分钟内完成整理。非热门联赛或杯赛可能略有延后。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">—— 是否提供历史赛季数据？</div>
+            <div class="faq-answer">目前主要覆盖近两个完整赛季以及当前赛季。更早的数据正在逐步归档，部分经典赛事会单独收录。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">—— 移动端打开体验如何？</div>
+            <div class="faq-answer">页面采用自适应布局，手机和平板均可正常阅读。横屏或大屏会展示更多并列信息。</div>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="site-note">
+        <p>如需要查询实时比分、球队资料或赛季统计，可直接前往 <a href="https://chinese-qiutanscore.com">球探</a> 浏览。</p>
+        <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #5d5a54;">页面所载信息仅供参考，请以官方实时数据为准。</p>
+    </div>
+
+    <div class="footer">
+        <span>专题页 · 内容说明</span>
+    </div>
+</div>
+</body>
+</html>
